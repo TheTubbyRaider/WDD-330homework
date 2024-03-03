@@ -104,3 +104,10 @@
     <footer>&copy;NOT a real business</footer>
   </body>
 </html>
+// Fix addToCart function
+function addToCart(item) {
+  let cart = getLocalStorage('so-cart') || [];
+  cart.push(item);
+  setLocalStorage('so-cart', cart);
+}
+
